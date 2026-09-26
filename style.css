@@ -65,7 +65,7 @@ main{
 /* header */
 .sidebar{
 min-height:100vh;
-max-width: 265px;
+width: 265px;
 padding:1rem;
 border-right: 1px solid var(--Neutral900);  
 display: inline-flex;
@@ -159,7 +159,7 @@ flex-direction: column;
     margin:0.5rem 0;
     font-size: xx-large;
     font-family:"fraunces-italic";
-    font-family:400;
+    font-weight:400;
 }
 .weather-sun{
     position: relative;
@@ -192,7 +192,7 @@ flex-direction: column;
 }
 .bienvenue{
     font-family:"fraunces",sans-serif;
-    font-size:2,5rem;
+    font-size:2.5rem;
     color:var(--Neutral900);
     font-weight:500;
 }
@@ -463,7 +463,7 @@ flex-direction: column;
 .info-number3{
     color:var(--Rose500);
 }
-.info-number:nth-child(1){
+.info-number{
     color:var(--Terracotta600);
     
 }
