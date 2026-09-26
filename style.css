@@ -1,0 +1,618 @@
+﻿:root{
+    /* Neutral */
+--Neutral900: hsl(33, 15%, 15%);
+--Neutral800: hsl(33, 22%, 20%);
+--Neutral700: hsl(32, 20%, 29%);
+--Neutral600: hsl(33, 17%, 41%);
+--Neutral400: hsl(36, 22%, 86%);
+--Neutral200: hsl(30, 24%, 93%);
+--Neutral100: hsl(35, 60%, 96%);
+--Neutral50: hsl(40, 60%, 98%);
+--Neutral0: hsl(0, 0%, 100%);
+
+/* Sun */
+--Sun500: hsl(42, 83%, 58%);
+--Sun300: hsl(44, 84%, 75%);
+--Sun200: hsl(45, 100%, 74%);
+--Sun50: hsl(41, 100%, 93%);
+/* Terracota */
+--Terracotta700: hsl(15, 69%, 37%);
+--Terracotta600: hsl(15, 74%, 41%);
+--Terracotta500: hsl(18, 62%, 47%);
+--Terracotta400: hsl(22, 72%, 56%);
+
+ /* Blue */
+
+--Blue500: hsl(230, 49%, 56%);
+
+/* Rose */
+
+--Rose500: hsl(340, 48%, 52%);
+
+}
+@font-face{
+    src:url(assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-family:"fraunces-italic"
+}
+@font-face{
+    src:url(assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf);
+    font-family:"fraunces"
+}
+@font-face{
+    src: url(assets/fonts/dm-mono/DMMono-Regular.ttf);
+    font-family: "dmmono-reg";
+}
+@font-face{
+    src: url(assets/fonts/dm-mono/DMMono-Medium.ttf);
+    font-family: "dmmono-med";
+}
+@font-face{
+    font-family:"dmsans";
+    src:url(assets/fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf);
+}
+*::after,*::before,*{
+    box-sizing: border-box;
+    margin:0;
+}
+body{
+ background-color: var(--Neutral100);
+}
+main{
+    display: flex;
+}
+/* Sidebar section */
+
+/* header */
+.sidebar{
+min-height:100vh;
+max-width: 265px;
+padding:1rem;
+border-right: 1px solid var(--Neutral900);  
+display: inline-flex;
+flex-direction: column;
+
+}
+
+.sidebarheader{
+   display: flex;
+   margin-bottom: 1rem;
+   align-items: center;
+   justify-content: space-between;
+
+}
+.sidebar-header-left{
+    display: flex;
+}
+.sidebarheader-texts{
+    
+    margin-left: 0.5rem;
+    
+}
+.maison{
+    color:var(--Terracotta500);
+    font-family:"fraunces-italic";
+    font-weight:500;
+}
+.soleil{
+    font-family:"fraunces";
+    font-weight:500;
+}
+.menu{
+    display:none;
+}
+/* Navigation */
+.sidebar-navigation{
+    margin-top: 1rem;
+}
+
+.sidebar-buttons{
+    font-family: "dmsans",Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:0.5rem;
+    padding: 0.5rem;
+    color: var(--Neutral600);
+    transition:0.5s;
+    border-radius: 0.5rem;
+    border:1px solid var(--Neutral100);
+}
+.icon-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+}
+.alarm{
+    border-radius:50%;
+    background-color: var(--Terracotta700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height:1rem;
+    color:white;
+    font-size:0.7rem;
+}
+.sidebar-bottom-wrapper{
+    margin-top: auto;
+}
+.sidebar-weather{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    gap:3px;    
+    bottom:0;
+    background-color: var(--Sun500);
+    padding:1rem;
+    margin-bottom: 0.4rem;
+    border-radius:0.5rem;
+    
+}
+.weather-text{
+     font-family: "dmmono-reg";
+     font-size:0.8rem;
+}
+.weather-temp{
+    margin:0.5rem 0;
+    font-size: xx-large;
+    font-family:"fraunces-italic";
+    font-family:400;
+}
+.weather-sun{
+    position: relative;
+    right:-50%;
+    top:-27%;
+}
+.sidebar-footer{
+    font-family:"dmmono-reg";
+    color:var(--Neutral800);
+    font-size:0.7rem;
+}
+/* Main section */
+.main-content{
+    flex:1;
+    min-width:0;
+}
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+}
+.left-header{
+    margin-left: 0.5rem;;
+}
+.booking-status{
+    font-family:"fraunces",Arial, Helvetica;
+    color:var(--Neutral800);
+    font-size:0.9rem;
+}
+.bienvenue{
+    font-family:"fraunces",sans-serif;
+    font-size:2,5rem;
+    color:var(--Neutral900);
+    font-weight:500;
+}
+.username{
+    font-family: "fraunces-italic",sans-serif;
+    color:var(--Terracotta600);
+    font-weight:500;
+}
+.right-header{
+    margin-right:1rem;
+}
+.right-header>button{
+    font-family: "dmsans";
+    font-weight:600;
+    padding:0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.print-btn{
+    border:1px solid var(--Neutral400);
+    margin-right: 10px;
+    background-color: var(--Neutral100);
+    outline:3px solid var(--Neutral100);
+    transition: 0.5s;
+}
+.calendar-btn{
+    border:none;
+    background-color: var(--Neutral900);
+    color:var(--Neutral100);
+    transition: 0.5s;
+    outline:3px solid var(--Neutral100);
+    transition: 0.5s;
+}
+/* Cards section */
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.receipt-card{
+    max-width:25rem;
+    background-color: var(--Neutral0);
+    padding:1.5rem;
+    border-radius:10px;
+    box-shadow: 0px 5px 11px;
+    transform:rotate(-5deg);
+    transition:0.5s;
+
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+}
+.receipt{
+    color:var(--Neutral800);
+    font-family:"dmmono",Arial, Helvetica, sans-serif;
+    font-size:0.8rem;
+}
+.title{
+    color:var(--Neutral900);
+    font-family:"fraunces";
+    font-weight:500;
+}
+.right-card-header{
+    max-width:5rem;
+}
+.stay-time{
+    display: flex;
+    justify-content: space-around;
+    margin:0.5rem;  
+    text-align: center;
+}
+.stay-info{
+    text-align: center;
+}
+.check{
+    text-transform: uppercase;
+    font-family: "dmmono-reg";
+    color:var(--Neutral800);
+}
+.date{
+    font-family: "fraunces-italic";
+    font-size:2rem;
+}
+.day-hour{
+    font-family: "dmsans";
+    color:var(--Neutral800);
+    opacity:1
+}
+.stay-list{
+    font-family: "dmsans",Arial, Helvetica, sans-serif;
+    color:var(--Neutral900);
+    margin: 0.5rem 0;
+}
+.info{
+    width:100%;
+}
+.item{
+    font-family:"dmsans",sans-serif;
+    color:var(--Neutral800);   
+}
+.total-paid{
+    font-family: "fraunces",sans-serif;
+    font-size:1.5rem;
+
+}
+/* sun icon */
+.sun-hover-animation{
+   width: 9rem;
+    position: absolute;
+    align-self: center;
+    margin: auto;
+    z-index: -1;
+    right: 37%;
+    
+}
+.sun-hover-animation img{
+    width:100%;
+}
+/* welcome card */
+.welcome-card{
+    max-width:23rem;
+    display: flex;
+    flex-direction:column;
+    padding:0.7rem;
+    border-radius:0.8rem;
+    background-image: linear-gradient(30deg,var(--Terracotta700),var(--Terracotta600),var(--Terracotta500),var(--Terracotta400));
+    box-shadow: 4px 8px 15px var(--Terracotta500);
+    transform:rotate(5deg);
+    transition:0.5s
+}
+
+.welcome{
+    font-family:"dmmono-reg";
+    color:var(--Neutral0);
+    margin-top: 1rem;
+    
+
+}
+.sun-image{
+    text-align: end;
+}
+.welcome-card-main{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    margin:auto 0;
+}
+.welcome-header{
+    color:var(--Sun500);
+    font-family:"fraunces-italic",sans-serif;
+    font-weight:500;
+}
+.hostname{
+    color:var(--Neutral0);
+    font-family:"fraunces-italic",sans-serif;
+    font-weight:400;
+    font-size:2rem; 
+    margin-bottom:1rem;
+}
+.welcome-card-footer{
+    margin-top: auto;
+}
+.welcome-text{
+    color:var(--Neutral0);
+    font-family: "dmsans";
+    font-size:0.9rem;
+}
+.room{
+    font-size:0.7rem;
+    color:var(--Neutral0);
+    font-family: "dmmono-reg";
+}
+.idkthis{
+    font-size:1.4rem;
+    color:var(--Neutral0);
+    font-family:"fraunces"
+}
+ .hover-alert{
+    margin:1rem auto;
+    text-align: center;
+    gap:2px;
+    text-transform: uppercase;
+    font-family:"dmmono-reg";
+    font-size:0.8rem;
+    padding-left:1rem;
+
+} 
+ .hover-alert::before,.hover-alert::after{
+    content:url(assets/images/icon-sparkle.svg)
+ }
+.info-section{
+    width:100%
+}
+.info-container{
+    display: flex;
+    padding:1rem;
+    gap:1rem;
+    justify-content:space-around;
+}
+.arrival,.wifi,.Breakfast{
+    /* min-width:23rem; */
+    flex: 1;
+    min-width: 0;
+    background-color: var(--Neutral0);
+    padding:1rem;
+    border:1px solid var(--Neutral400);
+    border-radius:0.6rem;
+}
+.info-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:1rem;
+}
+.arrival-title,.wifi-title,.Breakfast-title{
+    font-family: "dmmono-reg";
+    text-transform:uppercase;
+}
+.arrival-title{
+    color: var(--Terracotta600);
+}
+.wifi-title{
+    color: var(--Blue500);
+}
+.Breakfast-title{
+    color:var(--Rose500);
+}
+.info-header-left{
+    display: flex;
+    align-items: center;
+    gap:4px;
+
+}
+.icon-container-1{
+    padding:6px;
+    background-color: var(--Terracotta600);
+    border-radius:0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container-2{
+    padding:6px;
+    background-color: var(--Blue500);
+    border-radius:0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-container-3{
+    padding:6px;
+    background-color: var(--Rose500);
+    border-radius:0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-number,.info-number2,.info-number3{
+    font-family:"fraunces";
+    font-size:1.3rem;
+}
+.info-number2{
+    color:var(--Blue500);
+    
+}
+.info-number3{
+    color:var(--Rose500);
+}
+.info-number:nth-child(1){
+    color:var(--Terracotta600);
+    
+}
+.info-body h1{
+    color:var(--Neutral900);
+
+}
+.pre-description{
+    margin: 0.5rem 0;
+    font-family:"dmsans",Arial, Helvetica, sans-serif;
+    color:var(--Neutral700);
+
+}
+.info-description{
+    font-family:"dmsans"
+}
+.wifi-stats{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap:3px;
+    font-family:"dmsans"
+}
+
+.wifi-name,.wifi-pass{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Neutral200);
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+}
+
+.stat-name{
+    color:var(--Neutral800);
+    font-size:0.9rem;
+}
+
+.copy-btn {
+    border-radius:0.8rem;
+    border:1px solid var(--Neutral700);
+    font-family: 'dmsans';
+    font-size: 0.7rem;
+    background-color: var(--Neutral200);
+    cursor: pointer;
+}
+.attribution{
+    /* position: fixed;
+    bottom:0; */
+    font-family:"dmsans";
+    font-size:1rem;
+    background-color: brown;
+    text-align: center;
+}
+.attribution a{
+
+    color:goldenrod;
+}
+
+            /* Universal selectors */
+
+a{
+    text-decoration: none;
+    color:var(--Neutral900)
+}
+
+/* pseudo section */
+.sidebar-buttons:hover{
+    background-color: var(--Neutral0);
+    
+}
+
+.sidebar-buttons:active{
+    border:1px solid var(--Terracotta600);
+}
+.cards:hover .receipt-card{
+    transform: translateX(-5rem) rotate(5deg);
+
+}
+.cards:hover .welcome-card{
+    transform: translateX(5rem) rotate(-5deg);
+}
+.cards:hover .sun-hover-animation{
+    display: block;
+}
+.print-btn:active  {
+    outline:3px solid var(--Terracotta600);
+    transition: 0.5s;
+ }
+ .calendar-btn:active{
+    outline:3px solid var(--Terracotta600);
+    transition: 0.5s;
+ }
+/* Media Querry */  
+@media screen and (max-width:555px){
+    .main-content{
+        position:
+        absolute;
+        z-index: -1;
+        margin-top:4rem;
+    }
+    .sidebar-navigation,.sidebar-bottom-wrapper,.sidebar-footer{
+        background-color: var(--Neutral100);
+        transform: translateX(-300px);
+        
+    }
+    .sidebar{
+        border:none;
+        
+    }
+    main{
+        flex-direction:column;
+    }
+    .main-header{
+        display: block;
+    }
+    .right-header{
+        margin: 1rem 0;
+    }
+    .sun-hover-animation {
+        visibility: hidden;
+    }
+
+    .hover-alert{
+        display: none;
+    }
+    .info-section{
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .cards{
+        flex-direction: column;
+        margin:0 2rem;
+        transform: none;
+    }
+    .welcome-card{
+        margin-top:4rem;
+    }
+    .info-container{
+        flex-direction: column;
+    }
+    .menu{
+        display: block;
+        position: absolute;
+        right:1rem;
+    }
+    .attribution{
+        position: fixed;
+        bottom:0;
+        padding:0.2rem;
+    }
+}
+
